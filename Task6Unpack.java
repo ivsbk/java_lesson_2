@@ -36,9 +36,7 @@ public class Task6Unpack {
                 numBuf.append(letters[i]);
             } catch (NumberFormatException e) {
                 if (isNumber == true) {
-                    for (int j = 0; j < Integer.parseInt(numBuf.toString()); j++){
-                        buffer.append(letters[i]);
-                    }
+                    buffer.append(letters[i].repeat(Integer.parseInt(numBuf.toString())));
                     numBuf.setLength(0);
                     isNumber = false;
 
@@ -46,9 +44,7 @@ public class Task6Unpack {
                     buffer.append(letters[i]);
                     isNumber = false;
                 }
-
             }
-
         }
         return buffer;
     }
